@@ -1,0 +1,41 @@
+---
+import { SITE } from "../config/site";
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p class="footer-line">
+      © {year} {SITE.org} · 로컬-first로 만듭니다. 데이터는 사용자의 기기를 떠나지 않습니다.
+    </p>
+    {
+      SITE.isCodename && (
+        <p class="footer-note">{SITE.productName}는 개발 중인 제품의 코드네임입니다.</p>
+      )
+    }
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    padding: var(--space-8) 0;
+    margin-top: var(--space-24);
+  }
+
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .footer-line {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .footer-note {
+    font-size: 12px;
+    color: var(--muted-2);
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+import { SITE } from "../config/site";
+import BrandMark from "./BrandMark.astro";
+---
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="/" class="brand" aria-label={`${SITE.productName} 홈`}>
+      <BrandMark size={26} />
+      <span class="wordmark">{SITE.productName.toLowerCase()}</span>
+    </a>
+    <nav class="nav" aria-label="주요 페이지">
+      <a href="/changelog">변경 이력</a>
+      <a href="/privacy">개인정보</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--line);
+    background: var(--panel-soft);
+  }
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+  }
+
+  .brand:hover {
+    text-decoration: none;
+  }
+
+  .wordmark {
+    font-size: 17px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+
+  .nav {
+    display: inline-flex;
+    gap: var(--space-6);
+  }
+
+  .nav a {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .nav a:hover {
+    color: var(--text);
+    text-decoration: none;
+  }
+</style>
