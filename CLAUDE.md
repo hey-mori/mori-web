@@ -5,10 +5,13 @@ anything.
 
 ## Context
 
-- This is workstream **W19** of the app repo's
+- This site began as workstream **W19** of the app repo's
   `docs/production-program.md` (at `swarea/mori`,
-  `/Users/isaac/Dev/Projects/mori` locally). Read that program doc for
-  product direction, open decisions (D1–D6), and the launch checkpoint.
+  `C:\dev\mori` in this Windows workspace). That program is marked for
+  re-baselining. Read the app repo's
+  `docs/design/mori-context-workspace-architecture.md` for current direction;
+  use the program's D1–D6 and launch checkpoint as historical context until
+  they are reconciled.
 - **"Mori" is a placeholder codename.** The real name arrives later.
   Never hardcode the product name in a page; read it from
   `src/config/site.ts`, the single rename point.
