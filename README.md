@@ -45,7 +45,8 @@ npm run preview   # serve the built site
 
 ## Conventions
 
-See [CLAUDE.md](CLAUDE.md). The short form: commit format identical to
+Run `scripts/setup-git-hooks.sh` once per clone; the `commit-msg` hook and CI
+check commit messages. See [CLAUDE.md](CLAUDE.md). The short form: commit format identical to
 the app repo (type prefix + bullet-only body), never the em dash
 character, Korean-first copy, purple as brand accent only, no fake
 connected/download states.
