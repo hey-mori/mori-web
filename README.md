@@ -52,7 +52,7 @@ connected/download states.
 
 ## Relationship to the app repo
 
-The app lives at `swarea/mori`. Brand token source of truth is the app
+The app lives at `hey-mori/mori`. Brand token source of truth is the app
 repo's `src/styles/tokens.css`; this site keeps a hand-synced subset in
 `src/styles/global.css`. Program context: `docs/production-program.md`
 in the app repo (this site is workstream W19).
