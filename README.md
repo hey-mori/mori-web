@@ -1,9 +1,11 @@
 # mori-web
 
 Product site for **Mori** (codename): landing, changelog, and policy
-pages. Private until the naming decision and the public launch
-checkpoint (see the app repo's `docs/production-program.md`, W19 and
-D3).
+pages.
+
+**The site is not deployed.** It goes live after the product's real name
+and domain are decided. Until then there is no URL to visit; build it
+locally to see it.
 
 ## What this is
 
@@ -56,3 +58,8 @@ The app lives at `hey-mori/mori`. Brand token source of truth is the app
 repo's `src/styles/tokens.css`; this site keeps a hand-synced subset in
 `src/styles/global.css`. Program context: `docs/production-program.md`
 in the app repo (this site is workstream W19).
+
+## License
+
+No license has been chosen yet. Until a `LICENSE` file is added, the author
+keeps all rights to the code and copy in this repository.
