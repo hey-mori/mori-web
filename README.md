@@ -1,11 +1,25 @@
+<div align="center">
+
+<img src="public/favicon.svg" alt="" width="88" height="88">
+
 # mori-web
 
-Product site for **Mori** (codename): landing, changelog, and policy
-pages.
+**The product site for [Mori](https://github.com/hey-mori/mori).**
 
-**The site is not deployed.** It goes live after the product's real name
-and domain are decided. Until then there is no URL to visit; build it
-locally to see it.
+A static Astro site with the landing, changelog and privacy pages. It goes
+live once the product's real name and domain are decided.
+
+[Structure](#structure) ·
+[Develop](#develop) ·
+[Conventions](#conventions)
+
+![status: not deployed](https://img.shields.io/badge/status-not%20deployed-6246f5)
+![license: not chosen yet](https://img.shields.io/badge/license-not%20chosen%20yet-1c1e22)
+
+</div>
+
+**The site is not deployed.** Until the name is decided there is no URL to
+visit; build it locally to see it. "Mori" is a placeholder codename.
 
 ## What this is
 
