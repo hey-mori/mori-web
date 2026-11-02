@@ -6,7 +6,7 @@ anything.
 ## Context
 
 - This site began as workstream **W19** of the app repo's
-  `docs/production-program.md` (at `swarea/mori`,
+  `docs/production-program.md` (at `hey-mori/mori`,
   `C:\dev\mori` in this Windows workspace). That program is marked for
   re-baselining. Read the app repo's
   `docs/design/mori-context-workspace-architecture.md` for current direction;
