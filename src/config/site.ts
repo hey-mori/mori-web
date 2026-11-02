@@ -11,10 +11,10 @@ export const SITE = {
   /** True while the name is a codename; surfaces an honest note in the footer. */
   isCodename: true,
   /** One-line positioning, Korean-first. */
-  tagline: "당신의 작업을, 검토된 기억으로.",
+  tagline: "흩어진 작업의 흔적을, 다시 쓸 수 있는 기록으로.",
   /** Longer description used in meta tags and the hero. */
   description:
-    "AI 코딩 세션을 증거가 연결된 타임라인과 검토를 거친 프로젝트 기억으로 바꾸는 로컬-first 데스크톱 앱입니다. 모든 데이터는 사용자의 기기에만 저장됩니다.",
+    "메모, 링크, AI 대화, Git 기록 같은 작업의 흔적을 시간과 프로젝트에 연결된 기록으로 정리하는 로컬-first 개인 컨텍스트 워크스페이스입니다. 기록은 사용자의 기기에 저장됩니다.",
   /** Copyright holder shown in the footer. The code is hosted under hey-mori. */
   org: "swarea",
   /** Current app distribution status. Keep honest; no fake download buttons. */

@@ -13,6 +13,15 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-02",
+    title: "소개 문구를 현재 제품 정의에 맞춤",
+    items: [
+      "Mori를 AI 세션 기록 도구가 아닌 로컬-first 개인 컨텍스트 워크스페이스로 소개합니다.",
+      "자동 정리는 표시되고 되돌릴 수 있다는 실제 동작에 맞춰 원칙을 고쳤습니다.",
+      "앱이 아직 배포 전이며 일부 기능은 만들어지는 중이라는 상태를 그대로 적었습니다.",
+    ],
+  },
+  {
     date: "2026-07-12",
     title: "제품 사이트 뼈대",
     items: [
