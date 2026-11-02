@@ -20,9 +20,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The commit message step needs the pull request's commits.
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Commit messages follow the Mori commit format
+        if: github.event_name == 'pull_request'
+        env:
+          # The emoji rule needs a UTF-8 locale.
+          LC_ALL: C.UTF-8
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          status=0
+          for sha in $(git rev-list --no-merges "$BASE..$HEAD"); do
+            if ! git log -1 --format=%B "$sha" | bash scripts/validate-commit-message.sh --stdin; then
+              echo "::error::commit $(git log -1 --format='%h %s' "$sha") breaks the commit format"
+              status=1
+            fi
+          done
+          exit "$status"
