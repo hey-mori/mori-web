@@ -51,6 +51,7 @@ anything.
 
 ```
 npm run build
+bash scripts/check-line-endings.sh
 git diff --check
 git status --short
 ```
