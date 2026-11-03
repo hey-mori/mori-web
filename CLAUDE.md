@@ -6,8 +6,7 @@ anything.
 ## Context
 
 - This site began as workstream **W19** of the app repo's
-  `docs/production-program.md` (at `hey-mori/mori`,
-  `C:\dev\mori` in this Windows workspace). That program is marked for
+  `docs/production-program.md` (at `hey-mori/mori`). That program is marked for
   re-baselining. Read the app repo's
   `docs/design/mori-context-workspace-architecture.md` for current direction;
   use the program's D1–D6 and launch checkpoint as historical context until
@@ -15,8 +14,9 @@ anything.
 - **"Mori" is a placeholder codename.** The real name arrives later.
   Never hardcode the product name in a page; read it from
   `src/config/site.ts`, the single rename point.
-- The site stays **private and undeployed** until the naming decision
-  (D3) and the launch checkpoint pass.
+- The site stays **undeployed** until the naming decision (D3) and the
+  launch checkpoint pass. The repository itself is public, under MPL-2.0
+  (see the README), so nothing committed here is private.
 
 ## Hard rules (carried over from the app repo)
 

@@ -14,7 +14,7 @@ live once the product's real name and domain are decided.
 [Conventions](#conventions)
 
 ![status: not deployed](https://img.shields.io/badge/status-not%20deployed-6246f5)
-![license: not chosen yet](https://img.shields.io/badge/license-not%20chosen%20yet-1c1e22)
+![license: MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-1c1e22)
 
 </div>
 
@@ -76,5 +76,12 @@ in the app repo (this site is workstream W19).
 
 ## License
 
-No license has been chosen yet. Until a `LICENSE` file is added, the author
-keeps all rights to the code and copy in this repository.
+The source code in this repository is licensed under the [Mozilla Public License 2.0](LICENSE)
+(`MPL-2.0`). Copyright 2026 Isaac Lee.
+
+- Third-party dependencies keep their own licences.
+- The licence grants no rights to the Mori names or logos as trademarks. A
+  site built from this code must not present itself as Mori or use its mark.
+- Contributions are accepted under the same licence, with the sign-off the
+  organization's [contributing guide](https://github.com/hey-mori/.github/blob/main/CONTRIBUTING.md)
+  describes.
