@@ -13,6 +13,14 @@ export interface ChangelogEntry {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    date: "2026-11-04",
+    title: "Mori 제품군을 오픈 소스로 공개",
+    items: [
+      "Mori, Mori Lens, 브라우저 확장과 이 사이트의 소스를 GitHub에 MPL-2.0으로 공개했습니다.",
+      "첫 화면에서 GitHub 저장소로 바로 이동할 수 있고, Mori Lens와 브라우저 확장도 함께 소개합니다.",
+    ],
+  },
+  {
     date: "2026-11-02",
     title: "소개 문구를 현재 제품 정의에 맞춤",
     items: [

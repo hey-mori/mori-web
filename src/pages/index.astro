@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { SITE } from "../config/site";
+import { FAMILY, SITE } from "../config/site";
 
 const pillars = [
   {
@@ -42,14 +42,14 @@ const loop = [
     <div class="container">
       <span class="badge">
         <span class="badge-dot" aria-hidden="true"></span>
-        프라이빗 개발 중
+        오픈 소스 · MPL-2.0
       </span>
       <h1 class="hero-title">{SITE.tagline}</h1>
       <p class="hero-desc">{SITE.description}</p>
-      <p class="hero-status">
-        데스크톱 앱은 비공개로 개발 중이며, 아직 배포하지 않았습니다. 아래 기능 중 일부는
-        만들어지는 중입니다. 진행 상황은 <a href="/changelog">변경 이력</a>에서 볼 수 있습니다.
-      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={SITE.repositoryUrl}>GitHub에서 보기</a>
+        <a class="button button-quiet" href="/changelog">변경 이력</a>
+      </div>
     </div>
   </section>
 
@@ -98,6 +98,21 @@ const loop = [
       </ol>
     </div>
   </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">함께 쓰는 도구</h2>
+      <div class="grid-2">
+        {
+          FAMILY.map((p) => (
+            <a class="card family-card" href={p.href}>
+              <h3 class="card-title">{p.name}</h3>
+              <p class="card-body">{p.body}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
@@ -121,10 +136,64 @@ const loop = [
     max-width: 620px;
   }
 
-  .hero-status {
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
     margin-top: var(--space-8);
-    font-size: 14px;
-    color: var(--muted);
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 var(--space-6);
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .button:hover,
+  .family-card:hover {
+    text-decoration: none;
+  }
+
+  .button-primary {
+    background: var(--purple);
+    color: #fff;
+  }
+
+  .button-primary:hover {
+    color: #fff;
+    background: #5136e0;
+  }
+
+  .button-quiet {
+    border: 1px solid var(--line-strong);
+    background: var(--panel);
+    color: var(--text);
+  }
+
+  .button-quiet:hover {
+    color: var(--text);
+    border-color: var(--muted-2);
+  }
+
+  .family-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .family-card:hover {
+    color: inherit;
+    border-color: var(--line-strong);
+  }
+
+  .family-card .card-title::after {
+    content: " →";
+    color: var(--purple);
   }
 
   .lead {
@@ -136,6 +205,12 @@ const loop = [
   .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4);
   }
 
@@ -193,7 +268,8 @@ const loop = [
       font-size: 32px;
     }
 
-    .grid-3 {
+    .grid-3,
+    .grid-2 {
       grid-template-columns: 1fr;
     }
   }
