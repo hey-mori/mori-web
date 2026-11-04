@@ -8,11 +8,9 @@ const year = new Date().getFullYear();
     <p class="footer-line">
       © {year} {SITE.org} · 로컬-first로 만듭니다. 데이터는 기본으로 사용자의 기기에 머무릅니다.
     </p>
-    {
-      SITE.isCodename && (
-        <p class="footer-note">{SITE.productName}는 개발 중인 제품의 코드네임입니다.</p>
-      )
-    }
+    <p class="footer-note">
+      <a href={SITE.repositoryUrl}>GitHub</a> · MPL-2.0
+    </p>
   </div>
 </footer>
 

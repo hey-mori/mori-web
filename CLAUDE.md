@@ -40,8 +40,8 @@ anything.
   mark / favicon**. Everything else is flat.
 - Calm, professional, honest tone. No hype, no sparkle decoration, no
   cloud-forward imagery (the product is local-first).
-- **No fake states**: while the app is unreleased there is no download
-  button; the hero says "준비 중" honestly. Never render a
+- **No fake states**: there is no download button until a release is
+  published; the hero links to the source on GitHub instead. Never render a
   fake-connected or fake-available UI.
 - Token source of truth is the app repo's `src/styles/tokens.css`;
   `src/styles/global.css` here keeps a hand-synced subset. When
