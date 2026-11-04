@@ -1,9 +1,6 @@
 /**
- * The single rename point for the whole site.
- *
- * "Mori" is a placeholder codename (see the app repo's
- * docs/production-program.md, decision D3). When the real product name
- * lands, change it here; no page hardcodes the name.
+ * Product facts the pages read, so no page hardcodes a name, a link or the
+ * address the site is served from.
  */
 export const SITE = {
   /** Product name as rendered in the wordmark and copy. */
