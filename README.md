@@ -2,46 +2,36 @@
 
 <img src="public/favicon.svg" alt="" width="88" height="88">
 
-# mori-web
+# Mori Web
 
-**The product site for [Mori](https://github.com/hey-mori/mori).**
+**The website for [Mori](https://github.com/hey-mori/mori).**
 
-A static Astro site with the landing, changelog and privacy pages. It goes
-live once the product's real name and domain are decided.
+The landing, changelog and privacy pages, built with Astro as a fully static
+site.
 
 [Structure](#structure) ·
 [Develop](#develop) ·
 [Conventions](#conventions)
 
-![status: not deployed](https://img.shields.io/badge/status-not%20deployed-6246f5)
-![license: MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-1c1e22)
+[![license: MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-1c1e22)](LICENSE)
 
 </div>
 
-**The site is not deployed.** Until the name is decided there is no URL to
-visit; build it locally to see it. "Mori" is a placeholder codename.
+## Principles
 
-## What this is
-
-- A static Astro site. No server, no accounts, no analytics, no
-  tracking. The plan is a static host (GitHub Pages or Cloudflare Pages)
-  once the real product name and domain exist; no hosting is set up yet.
-- Korean-first copy, matching the product.
-- Honest states only: while the app is unreleased, the site says so;
-  no fake download buttons.
-
-## Rename plan
-
-"Mori" is a placeholder codename. Every page reads the product name
-from `src/config/site.ts`; when the real name lands, change it there
-and in this README. This repo itself will be renamed at that point
-(GitHub redirects the old name).
+- **Static.** No server, no accounts, no analytics and no tracking. `npm run
+  build` writes plain files that any static host can serve.
+- **Korean-first copy**, matching the product.
+- **One place for the name.** Every page reads the product name, tagline and
+  status from `src/config/site.ts`, so the whole site follows a single edit.
+- **True to the product.** The pages describe what the app does, and the
+  download section reflects its real release state.
 
 ## Structure
 
 ```
 src/
-  config/site.ts        the single rename point (name, tagline, status)
+  config/site.ts        product name, tagline and status, read by every page
   data/changelog.ts     changelog entries (typed data module)
   styles/global.css     tokens (synced by hand from the app's tokens.css) + base
   layouts/BaseLayout.astro
@@ -64,10 +54,15 @@ npm run preview   # serve the built site
 ## Conventions
 
 Run `scripts/setup-git-hooks.sh` once per clone; the `commit-msg` hook and CI
-check commit messages. See [CLAUDE.md](CLAUDE.md). The short form: commit format identical to
-the app repo (type prefix + bullet-only body), never the em dash
-character, Korean-first copy, purple as brand accent only, no fake
-connected/download states.
+both check commit messages.
+
+- Commits follow the [Mori commit format](https://github.com/hey-mori/.github/blob/main/docs/commit-format.md):
+  a type prefix and a bullet-only body.
+- Copy is Korean-first and never uses the em dash.
+- Brand purple is an accent for the mark, links and one primary action, not a
+  surface colour.
+
+[CLAUDE.md](CLAUDE.md) holds the complete working rules.
 
 ## Relationship to the app repo
 
