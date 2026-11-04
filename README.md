@@ -24,8 +24,8 @@ visit; build it locally to see it. "Mori" is a placeholder codename.
 ## What this is
 
 - A static Astro site. No server, no accounts, no analytics, no
-  tracking. It will deploy to a static host (GitHub Pages or
-  Cloudflare Pages) once the real product name and domain exist.
+  tracking. The plan is a static host (GitHub Pages or Cloudflare Pages)
+  once the real product name and domain exist; no hosting is set up yet.
 - Korean-first copy, matching the product.
 - Honest states only: while the app is unreleased, the site says so;
   no fake download buttons.
@@ -52,8 +52,10 @@ public/favicon.svg      brand mark (gradient allowed here only)
 
 ## Develop
 
-```
-npm install
+Requires Node.js 22, the version CI uses.
+
+```bash
+npm ci
 npm run dev       # local dev server
 npm run build     # static build into dist/
 npm run preview   # serve the built site
@@ -69,10 +71,20 @@ connected/download states.
 
 ## Relationship to the app repo
 
-The app lives at `hey-mori/mori`. Brand token source of truth is the app
-repo's `src/styles/tokens.css`; this site keeps a hand-synced subset in
-`src/styles/global.css`. Program context: `docs/production-program.md`
-in the app repo (this site is workstream W19).
+The app lives at [hey-mori/mori](https://github.com/hey-mori/mori). Its
+`src/styles/tokens.css` is the source of truth for brand tokens; this site
+keeps a hand-synced subset in `src/styles/global.css`, so change a shared
+value in the app first. What the pages say about the product follows the
+app's README and [project goal](https://github.com/hey-mori/mori/blob/main/docs/mori-project-goal.md).
+
+## Contributing and security
+
+Contributions follow the organization's
+[contributing guide](https://github.com/hey-mori/.github/blob/main/CONTRIBUTING.md),
+including the sign-off (`git commit -s`) on commits from outside the
+organization. Report a vulnerability privately with this repository's
+[report form](https://github.com/hey-mori/mori-web/security/advisories/new),
+never in an issue.
 
 ## License
 
