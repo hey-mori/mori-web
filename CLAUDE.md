@@ -1,7 +1,7 @@
 # Claude project instructions · mori-web
 
-The product site for Mori (codename). Read this before changing
-anything.
+The product site for Mori, served at https://mori.swarea.com. Read this
+before changing anything.
 
 ## Context
 
@@ -11,12 +11,13 @@ anything.
   `docs/design/mori-context-workspace-architecture.md` for current direction;
   use the program's D1–D6 and launch checkpoint as historical context until
   they are reconciled.
-- **"Mori" is a placeholder codename.** The real name arrives later.
-  Never hardcode the product name in a page; read it from
-  `src/config/site.ts`, the single rename point.
-- The site stays **undeployed** until the naming decision (D3) and the
-  launch checkpoint pass. The repository itself is public, under MPL-2.0
-  (see the README), so nothing committed here is private.
+- Never hardcode the product name or a link in a page; read them from
+  `src/config/site.ts`.
+- `main` is live: `.github/workflows/deploy.yml` builds it and publishes it to
+  GitHub Pages, which serves `mori.swarea.com` (`public/CNAME`). A merge is a
+  release of the site. The repository is public under MPL-2.0.
+- To roll back, run the deploy workflow by hand with an earlier commit as
+  `ref`, or revert the change on `main`.
 
 ## Hard rules (carried over from the app repo)
 

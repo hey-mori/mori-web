@@ -1,6 +1,5 @@
-# CI for the product site: the build must always pass. Deploy is a separate
-# workflow that lands once the naming decision (app repo production-program.md,
-# D3) unblocks the public domain.
+# CI for the product site: the build must always pass. deploy.yml publishes
+# main to mori.swarea.com.
 name: ci
 
 on:
