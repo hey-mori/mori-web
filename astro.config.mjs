@@ -6,4 +6,8 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://mori.swarea.com",
   trailingSlash: "never",
+  // changelog.html rather than changelog/index.html: GitHub Pages serves
+  // /changelog from the file directly, where a directory costs a redirect to
+  // /changelog/ on every internal link.
+  build: { format: "file" },
 });
