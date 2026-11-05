@@ -3,13 +3,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE } from "../config/site";
 ---
 
-<BaseLayout title="개인정보" description="개인정보 원칙 초안">
+<BaseLayout title="개인정보" description="Mori가 지키는 개인정보 원칙">
   <section class="section">
     <div class="container narrow">
-      <h1 class="section-title">개인정보 원칙 (초안)</h1>
-      <p class="draft-note">
-        정식 개인정보 처리방침은 공개 출시 전에 확정됩니다. 아래는 제품이 지키는 원칙의
-        초안입니다.
+      <h1 class="section-title">개인정보 원칙</h1>
+      <p class="lead-note">
+        {SITE.productName}는 기록을 사용자의 기기에 두는 것을 기본으로 합니다. 이 사이트와 앱이
+        지키는 원칙입니다.
       </p>
 
       <div class="rules">
@@ -46,7 +46,7 @@ import { SITE } from "../config/site";
     max-width: 720px;
   }
 
-  .draft-note {
+  .lead-note {
     font-size: 14px;
     color: var(--muted);
     margin-bottom: var(--space-8);
